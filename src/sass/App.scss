@@ -1,0 +1,18 @@
+.page {
+  min-height: 100vh;
+  min-width: 100vh;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+
+
+  .page-wrapper {
+    background-color: red;
+    max-width: 1200px;
+    padding: 0 16px;
+    width: 100%;
+  }
+
+}
+

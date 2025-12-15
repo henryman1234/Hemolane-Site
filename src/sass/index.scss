@@ -1,0 +1,93 @@
+*, ::after,  ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scrollbar-width: thin;
+    scrollbar-color: purple;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #e6e6ff;
+    width: 100vw;
+}
+
+
+// Custom scrollbar
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: red;
+}
+
+::-webkit-scrollbar-thumb {
+    background: green;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: lightgreen;
+}
+
+// Hide the scrollbar for the caroussel
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+// Animation Keyframes
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+//Utilities classes
+.animation-fadeIn  {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.animation-pulse {
+    animation: pulse 8s ease-in-out infinite;
+}
+
+.animation-spin-low {
+    animation: spin-slow 8s linear infinite;
+}
+
+
