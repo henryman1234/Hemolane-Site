@@ -15,8 +15,8 @@ function App () {
       <div className="page-wrapper">
         <Navbar/>
         <main>
-        <div>Bonsoir les gens</div>
-        <div>Bonjour les gens</div>
+          <div>Bonsoir les gens</div>
+          <div>Bonjour les gens</div>
         </main>
 
       </div>
