@@ -14,18 +14,19 @@ export const useScrollReveal = function (options:OptionsProps = {threshold: 0.1,
         rootMargin,
     } = options
 
-    const [isVisible, setIsvisible] = useState(false)
+    const [isVisible, setIsVisible] = useState(false)
     const ref = useRef(null)
 
     useEffect(function (){
         const element = ref.current
+
         if (!element) {
             return
         }
 
         const observer = new IntersectionObserver(function([entry]){
             if (entry.isIntersecting) {
-                setIsvisible(true)
+                setIsVisible(true)
                 observer.unobserve(element);
             }
         }, {threshold, rootMargin})
@@ -33,7 +34,7 @@ export const useScrollReveal = function (options:OptionsProps = {threshold: 0.1,
         observer.observe(element)
 
         return function () {
-            
+
             if  (element) {
                 observer.unobserve(element)
             }
