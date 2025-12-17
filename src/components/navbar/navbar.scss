@@ -1,1 +1,231 @@
+@use "../../sass/variables.scss";
 
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-clip: border-box;
+    backdrop-filter: blur(8px);
+    top: 0;
+    left: 0;
+    background-color: rgba(95, 35, 35, 0.2);
+    background-color: whitesmoke;
+    -webkit-box-shadow: 0px 5px 33px -21px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 5px 33px -21px rgba(66, 68, 90, 1);
+    box-shadow: 0px 5px 33px -21px rgba(66, 68, 90, 1);
+    // z-index: 1000;
+    position: fixed;
+
+    .navContainer {
+        width: 100%;
+        max-width: 1200px ;
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .start {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+
+            .logo {
+                display: flex;
+                align-items: center;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                    cursor: pointer;
+                }
+
+                span {
+                    font-size: 25px;
+                    color: variables.$blue;
+                    font-weight: bold;
+
+                    @media screen and (max-width: 970px) {
+                        display: none;
+                    }
+
+                    @media screen and (max-width: 678px) {
+                        display:block;
+                    }
+                    
+                }
+           
+             }
+
+            .inputBox {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                border: 1px solid lightgray;
+                transition: 0.3s ease;
+                padding: 10px;
+                border-radius: 10px;
+                width: 250px;
+                -webkit-box-shadow: 0px 5px 33px -21px rgba(66, 68, 90, 1);
+                -moz-box-shadow: 0px 5px 33px -21px rgba(66, 68, 90, 1);
+                box-shadow: 0px 5px 33px -21px rgba(66, 68, 90, 1);
+
+                @media screen and (max-width: 678px) {
+                    display:none;
+                }
+
+
+                &:focus-visible {
+                    outline: 3px solid variables.$yellow;
+                    transition: 0.3s ease;
+
+                }
+            
+
+
+                img {
+                    width: 15px;
+                    height: 15px;
+                }
+
+
+                input {
+                    outline: none;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: gray;
+                    background: transparent;
+                    height: 100%;
+                    border: none;
+
+                    &::placeholder {
+                        font-size: 14px;
+                        font-size: inherit;
+                    }
+
+                }   
+            }
+
+
+        }
+
+
+
+
+    }
+
+    .end {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        .middle {
+            display: flex;
+            gap: 12px;
+            flex-direction: row;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+                color: variables.$blue;
+                font-weight: bold;
+                cursor: pointer;
+                position: relative;
+
+                @media screen and (max-width: 870px) {
+                    display: none;
+                }
+
+
+                &:hover {
+                    background-color: variables.$yellow ;
+                    transition: 0.32s ease;
+                }
+
+
+            }
+        }
+
+        .contactLink {
+            width: 40px;
+            height: 40px;
+
+            @media screen and (max-width: 870px) {
+                display: none;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+
+
+    }
+
+    .searchIcon {
+        display: none;
+
+        @media screen and (max-width: 678px) {
+            display: initial;
+            height: 25px;
+            width: 25px;
+            cursor: pointer;
+        }
+    }
+
+
+    .menuIcon {
+        display: none;
+        z-index: 999;
+
+
+        @media screen and (max-width: 870px) {
+            display: flex;
+            height: 32px;
+            width: 32px;
+            cursor: pointer;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+                    
+    }
+
+    .menu {
+        display: flex;
+        height: 100vh !important;
+        position: fixed;
+        right: 0;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        top: 0;
+        transition: 0.5s ease all;
+        color: #fff;
+        flex-direction: column;
+        background-color: variables.$blue;
+        right: -50%;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        &.active {
+            right: 0;
+        }
+
+    }
+}

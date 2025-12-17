@@ -2,6 +2,7 @@ import { div } from "framer-motion/client";
 import React, { useState } from "react";
 import "./sass/App.scss";
 import Navbar from "./components/navbar/Navbar";
+import Hero from "./components/hero/Hero";
 
 
 function App () {
@@ -11,17 +12,14 @@ function App () {
   const [activeSecton, setIsActiveSection] = useState(false)
 
   return (
-    <div  className="page">
-      <div className="page-wrapper">
+    <div  className="page" >
+    
         <Navbar/>
         <main>
-          <div>Bonsoir les gens</div>
-          <div>Bonjour les gens</div>
+          <Hero/>
         </main>
 
       </div>
-    
-    </div>
   )
 }
 

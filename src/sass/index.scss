@@ -13,8 +13,11 @@ html {
 
 body {
     overflow-x: hidden;
-    background-color: #e6e6ff;
+    // background-color: #e6e6ff;
+    background-color: white;
+    font-family: Poppins, sans-serif;
     width: 100vw;
+    font-weight: 400;
 }
 
 
@@ -90,4 +93,40 @@ body {
     animation: spin-slow 8s linear infinite;
 }
 
+
+// fonts
+@font-face {
+    font-family: Poppins;
+    font-display: swap;
+    src: url("../../public/fonts/poppins.regular.ttf");
+    font-weight: 400;
+}
+
+// @font-face {
+//     font-family: Poppins;
+//     font-display: swap;
+//     src: url("../../public/fonts/poppins.italic.ttf");
+//     font-weight: 400;
+// }
+
+@font-face {
+    font-family: Poppins;
+    font-display: swap;
+    src: url("../../public/fonts/poppins.extrabold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Poppins;
+    font-display: swap;
+    src: url("../../public/fonts/poppins.bold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Poppins;
+    font-display: swap;
+    src: url("../../public/fonts/poppins.medium.ttf");
+    font-weight: 500;
+}
 
